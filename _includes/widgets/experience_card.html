@@ -12,11 +12,22 @@
                                 <li class="media mb-1">
                                     <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
                                     <div class="media-body">
-                                        <div>{{ item.name }}</div>
-                                        <div class="small">{{ item.dept }}</div>
-                                        <div class="small d-flex">
-                                            <div>{{ item.position }}</div>
-                                            <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
+                                        <div><strong>{{ item.name }}</strong></div>
+                                        <div style="margin-left: 8px;">
+                                            {% if item.dept %}
+                                            <div class="small">
+                                                <div style="display: flex; align-items: center;">
+                                                    {{ item.dept }}
+                                                    {% if item.dept_logo %}
+                                                    <img src="{{ item.dept_logo | relative_url }}" alt="{{ item.dept }}" style="width: 18px;" class="ml-1">
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                            {% endif %}
+                                            <div class="small d-flex">
+                                                <div><strong>{{ item.position }}</strong></div>
+                                                <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </li>
@@ -38,7 +49,7 @@
                                         <div>{{ item.name }}</div>
                                         <div class="small">{{ item.dept }}</div>
                                         <div class="small d-flex">
-                                            <div>{{ item.position }}</div>
+                                            <div>{% assign position = item.position %}{{ position }}</div>
                                             <div class="mt-auto ml-auto no-break"><em>{{ item.date }}</em></div>
                                         </div>
                                     </div>
