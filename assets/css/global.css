@@ -39,6 +39,80 @@ h1, h2, h3, h4, h5, h6,
     max-height: 120px;
 }
 
+/* Publication item alignment */
+.publication-item .row {
+    align-items: center;
+}
+
+.publication-item .col-md-5,
+.publication-item .col-md-7 {
+    display: flex;
+    align-items: center;
+}
+
+/* Larger pub text size with increased line spacing */
+.publication-item h6 {
+    font-size: 1.1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.7rem !important;
+}
+
+.publication-item p {
+    font-size: 0.95rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.publication-item .small {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 0.4rem !important;
+}
+
+/* Override Bootstrap styles for publication images */
+.publication-item img.lazy,
+.publication-item img.w-100,
+.publication-item img.rounded-sm,
+.publication-item img[class*="lazy"],
+.publication-item img[class*="w-100"],
+.publication-item img[class*="rounded"] {
+    max-width: 70% !important;
+    width: 70% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    border: 3px solid #4A90E2 !important;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2) !important;
+    transition: all 0.3s ease !important;
+    padding: 8px !important;
+    background-color: #F8FBFF !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+.publication-item img.lazy:hover,
+.publication-item img.w-100:hover,
+.publication-item img.rounded-sm:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.3) !important;
+    border-color: #357ABD !important;
+}
+
+.publication-item svg.bubble-visual-hash,
+.publication-item svg.lazy {
+    max-width: 70% !important;
+    width: 70% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    border: 3px solid #4A90E2 !important;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2) !important;
+    padding: 8px !important;
+    background-color: #F8FBFF !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+}
+
+
+
 .abstract-body {
     min-height: 100px;
 }
@@ -65,5 +139,55 @@ div.lazy {
 
 .email-text {
     font-family: Courier, monospace;
+}
+
+/* Abstract expandable link styles */
+.abstract-toggle {
+    transition: all 0.3s ease !important;
+    color: #6c757d !important;
+    font-size: 0.875rem !important;
+    padding: 0 !important;
+    margin-left: 10px !important;
+    text-decoration: none !important;
+    display: inline !important;
+    font-family: inherit !important;
+    line-height: inherit !important;
+    cursor: pointer !important;
+}
+
+.abstract-toggle:hover {
+    color: #007bff !important;
+    text-decoration: none !important;
+}
+
+.abstract-toggle:focus {
+    outline: none !important;
+}
+
+
+
+.abstract-content {
+    transition: all 0.4s ease-in-out;
+}
+
+.abstract-content .card {
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 10px;
+}
+
+.abstract-content .card-body {
+    padding: 15px;
+}
+
+/* Smooth collapse animation */
+.collapse {
+    transition: height 0.4s ease-in-out;
+}
+
+.collapsing {
+    transition: height 0.4s ease-in-out;
 }
 

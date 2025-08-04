@@ -38,4 +38,22 @@ $(function () {
     $(".lazy").on("load", function () {
         $grid.masonry('layout');
     });
+
+    // Abstract expandable link functionality
+    $('.abstract-toggle').on('click', function() {
+        var $link = $(this);
+        var isExpanded = $link.attr('aria-expanded') === 'true';
+        
+        // Add smooth scroll to expanded content
+        setTimeout(function() {
+            if (!isExpanded) {
+                var $target = $($link.attr('data-target'));
+                if ($target.length) {
+                    $('html, body').animate({
+                        scrollTop: $target.offset().top - 100
+                    }, 500);
+                }
+            }
+        }, 400);
+    });
 })

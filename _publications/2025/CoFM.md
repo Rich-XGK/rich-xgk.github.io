@@ -2,10 +2,10 @@
 title:          "CoFM: Molecular Conformation Generation via Flow Matching in SE(3)-Invariant Latent Space"
 date:           2025-07-19
 selected:       true
-pub:            "Forty-Second International Conference on Machine Learning (ICML 2025) Generative AI and Biology (GenBio) Workshop"
+pub:            "Forty-Second International Conference on Machine Learning GenBio Workshop"
 # pub_pre:        "Submitted to "
 # pub_post:       ' (Under review)'
-# pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Workshop</span>'
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">ICML25 GenBio</span>'
 pub_date:       "2025-03"
 
 abstract: >-
