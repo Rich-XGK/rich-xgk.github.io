@@ -119,35 +119,35 @@ div.lazy {
 }
 
 /* Publication cover image styling */
-.col-md-3 img.lazy,
-.col-md-3 img.w-100,
-.col-md-3 img.rounded-sm,
-.col-md-3 svg.bubble-visual-hash,
-.col-xl-2 img.lazy,
-.col-xl-2 img.w-100,
-.col-xl-2 img.rounded-sm,
-.col-xl-2 svg.bubble-visual-hash {
-    max-width: 150% !important;
-    width: 150% !important;
+.col-md-4 img.lazy,
+.col-md-4 img.w-100,
+.col-md-4 img.rounded-sm,
+.col-md-4 svg.bubble-visual-hash,
+.col-xl-3 img.lazy,
+.col-xl-3 img.w-100,
+.col-xl-3 img.rounded-sm,
+.col-xl-3 svg.bubble-visual-hash {
+    max-width: 120% !important;
+    width: 120% !important;
     height: auto !important;
     border-radius: 6px !important;
     transition: all 0.3s ease !important;
-    margin-left: -25% !important;
+    margin-left: -10% !important;
 }
 
 /* Publication title styling */
-.col-md-9 h5,
-.col-xl-10 h5 {
+.col-md-8 h5,
+.col-xl-9 h5 {
     font-size: 1rem !important;
     line-height: 1.3 !important;
 }
 
-.col-md-3 img.lazy:hover,
-.col-md-3 img.w-100:hover,
-.col-md-3 img.rounded-sm:hover,
-.col-xl-2 img.lazy:hover,
-.col-xl-2 img.w-100:hover,
-.col-xl-2 img.rounded-sm:hover {
+.col-md-4 img.lazy:hover,
+.col-md-4 img.w-100:hover,
+.col-md-4 img.rounded-sm:hover,
+.col-xl-3 img.lazy:hover,
+.col-xl-3 img.w-100:hover,
+.col-xl-3 img.rounded-sm:hover {
     transform: scale(1.05) !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
 }
