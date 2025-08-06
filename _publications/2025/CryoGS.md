@@ -2,7 +2,7 @@
 title:          "Cryo-EM Structure Reconstruction by Gaussian Splatting: Pushing the Resolution to Extrem"
 date:           2025-03-19
 selected:       true
-pub:            "Nature"
+# pub:            "Nature"
 pub_pre:        "Submitted to "
 pub_post:       ' (Under review)'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Preprint</span>'
