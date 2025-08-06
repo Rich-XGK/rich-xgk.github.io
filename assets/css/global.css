@@ -127,11 +127,12 @@ div.lazy {
 .col-xl-2 img.w-100,
 .col-xl-2 img.rounded-sm,
 .col-xl-2 svg.bubble-visual-hash {
-    max-width: 100% !important;
-    width: 100% !important;
+    max-width: 150% !important;
+    width: 150% !important;
     height: auto !important;
     border-radius: 6px !important;
     transition: all 0.3s ease !important;
+    margin-left: -25% !important;
 }
 
 /* Publication title styling */
