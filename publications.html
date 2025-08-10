@@ -8,6 +8,7 @@ body_attr: >-
 
 {% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
 
+<div class="publications-page">
 <div class="row">
     <div class="col-12 col-lg-10">
         {% for year in pubs_by_year %}
@@ -29,4 +30,5 @@ body_attr: >-
         </div>
     </div>
 
+</div>
 </div>

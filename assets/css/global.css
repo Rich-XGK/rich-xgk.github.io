@@ -127,17 +127,17 @@ div.lazy {
 .col-xl-3 img.w-100,
 .col-xl-3 img.rounded-sm,
 .col-xl-3 svg.bubble-visual-hash {
-    max-width: 120% !important;
-    width: 120% !important;
+    max-width: 100% !important;
+    width: 100% !important;
     height: auto !important;
     border-radius: 6px !important;
     transition: all 0.3s ease !important;
-    margin-left: -10% !important;
+    margin-left: 0 !important;
 }
 
-/* Publication title styling */
-.col-md-8 h5,
-.col-xl-9 h5 {
+/* Publication title styling - only for publications page */
+.publications-page .col-md-8 h5,
+.publications-page .col-xl-9 h5 {
     font-size: 1rem !important;
     line-height: 1.3 !important;
 }
@@ -148,8 +148,64 @@ div.lazy {
 .col-xl-3 img.lazy:hover,
 .col-xl-3 img.w-100:hover,
 .col-xl-3 img.rounded-sm:hover {
-    transform: scale(1.05) !important;
+    transform: scale(1.02) !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+}
+
+/* Mobile publication item styling */
+.d-md-none .w-100 {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    min-height: 200px !important;
+}
+
+.d-md-none .w-100 > div {
+    background-color: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(5px) !important;
+}
+
+/* Mobile publication text styling - only for publications page */
+.publications-page .d-md-none h5 {
+    font-size: 1rem !important;
+    line-height: 1.3 !important;
+}
+
+.publications-page .d-md-none .small {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Ensure proper spacing in publication items */
+.row.no-gutters .col-md-4,
+.row.no-gutters .col-xl-3 {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+.row.no-gutters .col-md-8,
+.row.no-gutters .col-xl-9 {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+}
+
+/* Publication text styling - only for publications page */
+.publications-page .col-md-8 .small,
+.publications-page .col-xl-9 .small {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+}
+
+.publications-page .col-md-8 p.small,
+.publications-page .col-xl-9 p.small {
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Abstract text styling - only for publications page */
+.publications-page .abstract-content .card-body p {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
 }
 
 /* Abstract expandable link styles */
