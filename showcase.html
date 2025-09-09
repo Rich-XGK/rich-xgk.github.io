@@ -1,32 +1,160 @@
 ---
 layout: default
-title : Showcase
-navbar_title: Showcase
-container_class: container-xl
+title : Rich Photograph
+navbar_title: Photography
+container_class: container-fluid
 ---
 
-{% assign cards_by_group = site.showcase | sort: "date" | reverse | where: "show", true | group_by_exp: "item", "item.group" %}
+<style>
+.photography-hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+    text-align: center;
+    padding: 3rem 0;
+}
 
-{% for group in cards_by_group %}
-<h1>{{ group.name }}</h1>
-<div class="row grid mb-4">
-    <div class="grid-sizer col-1"></div>
-    {% for item in group.items %}
-    {% if item.width >= 4 -%}
-        {%- assign width_sm = 12 -%}
-        {%- assign width_xs = 12 -%}
-    {%- elsif item.width >= 2 -%}
-        {%- assign width_sm = 6 -%}
-        {%- assign width_xs = 6 -%}
-    {%- else -%}
-        {%- assign width_sm = item.width | times: 2 | at_most: 12 -%}
-        {%- assign width_xs = item.width | times: 2 | at_most: 12 -%}
-    {%- endif -%}
-    <div class="p-2 grid-item col-md-{{ item.width | at_most: 12 }} col-sm-{{ width_sm }} col-{{ width_xs }}">
-        <div class="{% if item.class != null %}{{ item.class }}{% else %}card border-0 shadow-sm bg-white{% endif %}">
-            {{ item.content }}
-        </div>
+.photography-title {
+    font-size: 3.5rem;
+    font-weight: 200;
+    letter-spacing: 0.15em;
+    margin-bottom: 4rem;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.photography-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 2rem;
+    height: 80vh;
+    max-height: 600px;
+}
+
+.category-card {
+    position: relative;
+    background: white;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    text-decoration: none;
+    color: inherit;
+    border-color: rgba(0,0,0,0.1);
+}
+
+.category-cover {
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-cover {
+    transform: scale(1.02);
+}
+
+.category-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    padding: 2rem 1.5rem 1.5rem;
+    color: white;
+}
+
+.category-name {
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.category-description {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin: 0.8rem 0 0;
+    text-align: center;
+    line-height: 1.3;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .photography-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .photography-categories {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+        height: auto;
+        max-height: none;
+    }
+    
+    .category-card {
+        height: 200px;
+    }
+    
+    .category-name {
+        font-size: 1.5rem;
+    }
+    
+    .category-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .photography-categories {
+        gap: 0.8rem;
+    }
+    
+    .category-card {
+        height: 180px;
+    }
+    
+    .category-name {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+<div class="photography-hero">
+    <h1 class="photography-title">Rich Photograph</h1>
+    
+    <div class="photography-categories">
+        {% for category in site.data.photography.categories %}
+        <a href="/photography/{{ category[0] }}" class="category-card">
+            <img src="{{ category[1].cover_image }}" alt="{{ category[1].name }}" class="category-cover">
+            <div class="category-overlay">
+                <h2 class="category-name">{{ category[1].name }}</h2>
+                <p class="category-description">{{ category[1].description }}</p>
+            </div>
+        </a>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
-{% endfor %}
