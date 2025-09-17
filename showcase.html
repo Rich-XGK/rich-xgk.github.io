@@ -148,7 +148,7 @@ container_class: container-fluid
     
     <div class="photography-categories">
         {% for category in site.data.photography.categories %}
-        <a href="/photography/{{ category[0] }}" class="category-card">
+        <a href="{{ category[1].unsplash_url }}" target="_blank" class="category-card">
             <img src="{{ category[1].cover_image }}" alt="{{ category[1].name }}" class="category-cover">
             <div class="category-overlay">
                 <h2 class="category-name">{{ category[1].name }}</h2>

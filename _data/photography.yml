@@ -1,75 +1,27 @@
 # Photography Configuration
-# Images are stored in assets/photography/YYYY/MMDDHH.JPG format
-# Each image can belong to multiple categories
+# Cover images link to Unsplash collections
 
 categories:
   landscape:
     name: "Landscape"
     description: "Natural beauty and scenic vistas"
-    cover_image: "/assets/images/photography/landscape/cover.JPG"
-    images:
-      - path: "/assets/photography/2025/090602.JPG"
-      - path: "/assets/photography/2025/090601.JPG"
-      - path: "/assets/photography/2025/083102.JPG"
-      - path: "/assets/photography/2025/083101.JPG"
-      - path: "/assets/photography/2025/083003.JPG"
-      - path: "/assets/photography/2025/083002.JPG"
-      - path: "/assets/photography/2025/083001.JPG"
-      - path: "/assets/photography/2025/082712.jpg"
-      - path: "/assets/photography/2025/082709.jpg"
-      - path: "/assets/photography/2025/082707.jpg"
-      - path: "/assets/photography/2025/082303.JPG"
-      - path: "/assets/photography/2025/082204.JPG"
-      - path: "/assets/photography/2025/082203.jpg"
-      - path: "/assets/photography/2025/082202.JPG"
-      - path: "/assets/photography/2025/082201.JPG"
-      - path: "/assets/photography/2025/081703.jpg"
-      - path: "/assets/photography/2025/081702.jpg"
-      - path: "/assets/photography/2025/081701.JPG"
-      - path: "/assets/photography/2025/080902.jpg"
-      - path: "/assets/photography/2025/080901.JPG"
-      - path: "/assets/photography/2025/072603.JPG"
-      - path: "/assets/photography/2025/072602.JPG"
-      - path: "/assets/photography/2025/072601.JPG"
-      - path: "/assets/photography/2025/053104.JPG"
-      - path: "/assets/photography/2025/053103.JPG"
-      - path: "/assets/photography/2025/053102.JPG"
-      - path: "/assets/photography/2025/053101.JPG"
-      - path: "/assets/photography/2025/051001.JPG"
-      - path: "/assets/photography/2025/050301.JPG"
-
+    cover_image: "/assets/images/covers/photography/landscape.jpg"
+    unsplash_url: "https://unsplash.com/collections/7coDFeFGpIk/landscape"
 
   portrait:
     name: "Portrait"
     description: "Human expressions and character"
-    cover_image: "/assets/images/photography/portrait/cover.JPG"
-    images:
-      - path: "/assets/photography/2025/082305.JPG"
-      - path: "/assets/photography/2025/082304.JPG"
-      - path: "/assets/photography/2025/082302.JPG"
-      - path: "/assets/photography/2025/082301.JPG"
+    cover_image: "/assets/images/covers/photography/portrait.JPG"
+    unsplash_url: "https://unsplash.com/collections/Hox6jXB9oMo/Portrait"
 
   street:
     name: "Street"
     description: "Urban life and candid moments"
-    cover_image: "/assets/images/photography/street/cover.jpg"
-    images:
-      - path: "/assets/photography/2025/082711.JPG"
-      - path: "/assets/photography/2025/082710.jpg"
-      - path: "/assets/photography/2025/082708.jpg"
-      - path: "/assets/photography/2025/082706.jpg"
-      - path: "/assets/photography/2025/082705.jpg"
-      - path: "/assets/photography/2025/082704.jpg"
-      - path: "/assets/photography/2025/082703.jpg"
-      - path: "/assets/photography/2025/082702.jpg"
-      - path: "/assets/photography/2025/082701.jpg"
+    cover_image: "/assets/images/covers/photography/street.jpg"
+    unsplash_url: "https://unsplash.com/collections/Uqdrvy4S84w/Street"
 
   moments:
     name: "Moments in Life"
     description: "Captured memories and emotions"
-    cover_image: "/assets/images/photography/moments/cover.JPG"
-    images:
-      - path: "/assets/photography/2025/062201.JPG"
-      - path: "/assets/photography/2025/062101.JPG"
-      - path: "/assets/photography/2025/061901.JPG"
-      - path: "/assets/photography/2024/120701.JPG"
+    cover_image: "/assets/images/covers/photography/moments.JPG"
+    unsplash_url: "https://unsplash.com/collections/fNIVksQi7GY/Moments-in-Life"
